@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <script src="~/Scripts/jquery-3.2.1.js"></script>
+    <script src="~/Scripts/knockout-3.4.2.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <title>@ViewBag.Title</title>
+    <style>
+        body { padding-top: 10px; }
+        .validation-summary-errors { font-weight: bold; color: #f00; }
+    </style>
+    @RenderSection("Scripts", false)
+</head>
+<body class="container">
+    @RenderBody()
+</body>
+</html>
