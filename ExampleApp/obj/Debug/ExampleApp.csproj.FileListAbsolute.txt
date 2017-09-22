@@ -39,3 +39,12 @@ c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\bin\Sys
 c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\obj\Debug\ExampleApp.csprojResolveAssemblyReference.cache
 c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\obj\Debug\ExampleApp.dll
 c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\obj\Debug\ExampleApp.pdb
+c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\bin\Ninject.dll
+c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\bin\Ninject.Extensions.ChildKernel.dll
+c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\bin\Ninject.xml
+c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\bin\Ninject.Extensions.ChildKernel.xml
+c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\bin\Ninject.Web.Common.dll
+c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\bin\Ninject.Web.Mvc.dll
+c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\bin\WebActivatorEx.dll
+c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\bin\Ninject.Web.Common.xml
+c:\users\pat\documents\visual studio 2015\Projects\ExampleApp\ExampleApp\bin\Ninject.Web.Mvc.xml

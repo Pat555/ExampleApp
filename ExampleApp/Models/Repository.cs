@@ -8,17 +8,17 @@ namespace ExampleApp.Models
     public class Repository : IRepository
     {
         private Dictionary<int, Product> data;
-        private static Repository repo;
+        //private static Repository repo;
 
-        static Repository()
-        {
-            repo = new Repository();
-        }
+        //static Repository()
+        //{
+        //    repo = new Repository();
+        //}
 
-        public static Repository Current
-        {
-            get { return repo; }
-        }
+        //public static Repository Current
+        //{
+        //    get { return repo; }
+        //}
 
         public Repository()
         {

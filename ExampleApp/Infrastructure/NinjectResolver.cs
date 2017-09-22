@@ -1,6 +1,7 @@
 ﻿using ExampleApp.Models;
 using Ninject;
 using Ninject.Extensions.ChildKernel;
+using Ninject.Web.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,24 +10,22 @@ using System.Web.Http.Dependencies;
 
 namespace ExampleApp.Infrastructure
 {
-    public class NinjectResolver : IDependencyResolver
+    public class NinjectResolver : System.Web.Http.Dependencies.IDependencyResolver, 
+        System.Web.Mvc.IDependencyResolver
     {
         private IKernel kernel;
 
         public NinjectResolver() : this (new StandardKernel()) {}
 
-        public NinjectResolver(IKernel ninjectKernel, bool scope=false)
+        public NinjectResolver(IKernel ninjectKernel)
         {
             kernel = ninjectKernel;
-            if (!scope)
-            {
-                AddBindings(kernel);
-            }
+            AddBindings(kernel);
         }
 
         public IDependencyScope BeginScope()
         {
-            return new NinjectResolver(AddRequestBindings(new ChildKernel(kernel)), true);
+            return this;
         }
 
         public object GetService(Type serviceType)
@@ -46,7 +45,7 @@ namespace ExampleApp.Infrastructure
 
         public void AddBindings(IKernel kernel)
         {
-            // singleton and transient bindings go here
+            kernel.Bind<IRepository>().To<Repository>().InRequestScope();
         }
 
         private IKernel AddRequestBindings(IKernel kernel)
