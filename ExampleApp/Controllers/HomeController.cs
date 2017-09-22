@@ -9,11 +9,11 @@ namespace ExampleApp.Controllers
 {
     public class HomeController : Controller
     {
-        Repository repo;
+        IRepository repo;
 
-        public HomeController()
+        public HomeController(IRepository repoImpl)
         {
-            repo = Repository.Current;
+            repo = repoImpl;
         }
 
         // GET: Home
