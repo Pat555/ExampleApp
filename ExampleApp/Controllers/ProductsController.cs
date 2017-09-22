@@ -10,11 +10,11 @@ namespace ExampleApp.Controllers
 {
     public class ProductsController : ApiController
     {
-        Repository repo;
+        IRepository repo;
 
-        public ProductsController()
+        public ProductsController(IRepository repoImpl)
         {
-            repo = Repository.Current;
+            repo = repoImpl;
         }
 
         public IEnumerable<Product> GetAll()

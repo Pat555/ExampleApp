@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ExampleApp.Models
 {
-    public class Repository
+    public class Repository : IRepository
     {
         private Dictionary<int, Product> data;
         private static Repository repo;
