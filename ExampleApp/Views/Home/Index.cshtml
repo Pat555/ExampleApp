@@ -12,13 +12,17 @@
     <div class="panel-heading">RSVPs</div>
     <table id="rsvpTable" class="table table-striped">
         <thead>
-            <tr><th>ID</th><th>Name</th><th>Price</th></tr>
+            <tr><th>ID</th><th>Name</th><th>Price</th><th></th></tr>
         </thead>
         <tbody data-bind="foreach: products">
             <tr>
                 <td data-bind="text: ProductID"></td>
                 <td data-bind="text: Name"></td>
                 <td data-bind="text: Price"></td>
+                <td>
+                    <button class="deleteBtn btn btn-danger btn-xs"
+                            data-bind="click: deleteProduct">Delete</button>
+                </td>
             </tr>
         </tbody>
     </table>

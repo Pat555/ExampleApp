@@ -1,4 +1,5 @@
-﻿using ExampleApp.Models;
+﻿using ExampleApp.Infrastructure;
+using ExampleApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +18,24 @@ namespace ExampleApp.Controllers
             repo = repoImpl;
         }
 
-        public IEnumerable<Product> GetAll()
+        public IHttpActionResult GetAll()
         {
-            return repo.Products;
+            return Ok(repo.Products);
+        }
+
+        public IHttpActionResult Delete(int id)
+        {
+            repo.DeleteProduct(id);
+            //return StatusCode(HttpStatusCode.NoContent);
+            //return ResponseMessage(new HttpResponseMessage(HttpStatusCode.NoContent));
+            return new NoContentResult();
+        }
+
+        [HttpGet]
+        [Route("api/products/noop")]
+        public IHttpActionResult NoOp()
+        {
+            return Ok();
         }
     }
 }
